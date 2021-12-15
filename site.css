@@ -31,8 +31,17 @@ padding: 20px;
     font-size: 20rem;
 }
 
-.top-bar{
+.topbar{
     background-color: darkseagreen;
     color: white;
-    
+    padding: 20px;
+}
+
+.text{
+    color: thistle;
+    font-size: 0.8rem
+}
+
+.amount_holder{
+    font-size: 2rem;
 }
