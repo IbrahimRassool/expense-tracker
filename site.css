@@ -30,3 +30,9 @@ padding: 20px;
 .header{
     font-size: 20rem;
 }
+
+.top-bar{
+    background-color: darkseagreen;
+    color: white;
+    
+}
