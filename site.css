@@ -34,7 +34,7 @@ padding: 20px;
 .topbar{
     background-color: darkseagreen;
     color: white;
-    padding: 20px;
+    padding: 20px 0;
     max-width: 30px;
     text-align: center;
 }
