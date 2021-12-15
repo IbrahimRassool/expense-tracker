@@ -24,7 +24,8 @@ Our Expense Tracker
     <div class="form">
       <p>Add transaction</p>
       <div class="form-control">
-        <label for="name">Type</label>
+        <label for="name">Name</label>
+        <input type="text" class="name" id ="name" placeholder="e.g. My Salary">
         <div>
           <input type="radio" name="name" id="income">
           <label for="radio">Income</label>
@@ -33,6 +34,10 @@ Our Expense Tracker
           <input type="radio" name="name" id="expense">
           <label for="radio">Expense</label></div>
       </div>
+    </div>
+    <div class="form-control">
+      <label for="amount">Amount</label>
+      <input type="number" name="amount" id="amount" placeholder="e.g. 400">
     </div>
   </div>
 </div>
