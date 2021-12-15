@@ -36,12 +36,13 @@ padding: 20px;
     color: white;
     padding: 20px 0;
     max-width: 30px;
-    text-align: center;
+    
 }
 
 .text{
     color: thistle;
     font-size: 0.8rem
+    margin-bottom: 2px
 }
 
 .amount_holder{
