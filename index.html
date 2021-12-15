@@ -1,12 +1,45 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.2/dist/chart.min.js"></script>
-    <title>Expense Tracker</title>
-   <link rel="stylesheet" href="site.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Expense Tracker</title>
+  <link rel="stylesheet" href="site.css">
 </head>
 <body>
-  <h1>Expense Tracker</h1>  
-<script src="validation.js"></script>
+
+<div class="header">
+Our Expense Tracker
+</div>
+<div class="main">
+  <div class="container">
+    <div class="topbar">
+      <p>Your Current balance</p>
+
+      <p>
+         <span id="currency"></span>
+         <span id ="balance"></span>
+      </p>
+    </div>
+    <div class="form">
+      <p>Add transaction</p>
+      <div class="form-control">
+        <label for="name">Type</label>
+        <div>
+          <input type="radio" name="name" id="income">
+          <label for="radio">Income</label>
+        </div>
+        <div>
+          <input type="radio" name="name" id="expense">
+          <label for="radio">Expense</label></div>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="footer">
+
+</div>
+
+ <script src="validation.js"></script> 
 </body>
 </html>
