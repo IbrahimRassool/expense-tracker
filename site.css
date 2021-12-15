@@ -11,12 +11,12 @@ font-family: Arial, Helvetica, sans-serif;
 body{
     min-height: 100vh;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .main{
     flex-grow: 1;
     display: flex;
     justify-content: center;
-    align-items:
+    align-items:center
 }
