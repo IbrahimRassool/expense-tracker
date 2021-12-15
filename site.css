@@ -18,3 +18,11 @@ body{
     padding: 70px 0;
     text-align: center;
 }
+
+.header, .footer{
+background-color: aqua;
+font-family: "Red Hat Display", sans-serif;
+color: white;
+text-align: center ;
+padding: 20px;
+}
