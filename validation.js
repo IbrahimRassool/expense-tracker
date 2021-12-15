@@ -97,111 +97,40 @@ init();
 
 form.addEventListener("submit", addTransation);
 
-// <block:actions:2>
-const actions = [
-    {
-      name: 'Randomize',
-      handler(chart) {
-        chart.data.datasets.forEach(dataset => {
-          dataset.data = Utils.numbers({count: chart.data.labels.length, min: 0, max: 100});
-        });
-        chart.update();
-      }
-    },
-    {
-      name: 'Add Dataset',
-      handler(chart) {
-        const data = chart.data;
-        const newDataset = {
-          label: 'Dataset ' + (data.datasets.length + 1),
-          backgroundColor: [],
-          data: [],
-        };
-  
-        for (let i = 0; i < data.labels.length; i++) {
-          newDataset.data.push(Utils.numbers({count: 1, min: 0, max: 100}));
-  
-          const colorIndex = i % Object.keys(Utils.CHART_COLORS).length;
-          newDataset.backgroundColor.push(Object.values(Utils.CHART_COLORS)[colorIndex]);
-        }
-  
-        chart.data.datasets.push(newDataset);
-        chart.update();
-      }
-    },
-    {
-      name: 'Add Data',
-      handler(chart) {
-        const data = chart.data;
-        if (data.datasets.length > 0) {
-          data.labels.push('data #' + (data.labels.length + 1));
-  
-          for (let index = 0; index < data.datasets.length; ++index) {
-            data.datasets[index].data.push(Utils.rand(0, 100));
-          }
-  
-          chart.update();
-        }
-      }
-    },
-    {
-      name: 'Remove Dataset',
-      handler(chart) {
-        chart.data.datasets.pop();
-        chart.update();
-      }
-    },
-    {
-      name: 'Remove Data',
-      handler(chart) {
-        chart.data.labels.splice(-1, 1); // remove the label first
-  
-        chart.data.datasets.forEach(dataset => {
-          dataset.data.pop();
-        });
-  
-        chart.update();
-      }
-    }
-  ];
-  // </block:actions>
-  
-  // <block:setup:1>
-  const DATA_COUNT = 5;
-  const NUMBER_CFG = {count: DATA_COUNT, min: 0, max: 100};
-  
-  const data = {
-    labels: ['Red', 'Orange', 'Yellow', 'Green', 'Blue'],
-    datasets: [
-      {
-        label: 'Dataset 1',
-        data: Utils.numbers(NUMBER_CFG),
-        backgroundColor: Object.values(Utils.CHART_COLORS),
-      }
-    ]
-  };
-  // </block:setup>
-  
-  // <block:config:0>
-  const config = {
+//
+
+const ctx = document.getElementById('myChart').getContext('2d');
+const myChart = new Chart(ctx, {
     type: 'pie',
-    data: data,
-    options: {
-      responsive: true,
-      plugins: {
-        legend: {
-          position: 'top',
-        },
-        title: {
-          display: true,
-          text: 'Chart.js Pie Chart'
-        }
-      }
+    data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.2)',
+                'rgba(54, 162, 235, 0.2)',
+                'rgba(255, 206, 86, 0.2)',
+                'rgba(75, 192, 192, 0.2)',
+                'rgba(153, 102, 255, 0.2)',
+                'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
     },
-  };
-  // </block:config>
-  
-  module.exports = {
-    actions: actions,
-    config: config,
-  };
+    options: {
+        scales: {
+            y: {
+                beginAtZero: true
+            }
+        }
+    }
+});
