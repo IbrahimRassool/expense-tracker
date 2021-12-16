@@ -1,7 +1,5 @@
 const currencyHolder = document.getElementById("currency");
-
 const balance = document.getElementById("balance");
-
 const tnxNameHolder = document.getElementById("name");
 const tnxAmountHolder = document.getElementById("amount");
 const income = document.getElementById("income");
@@ -14,7 +12,7 @@ let listOfTransaction=[];
 let currentBalance= 0;
 
 function render(){
-  currentBalance = listOfTransaction.reduce((total,value)=>{return total+value}, 0)
+  currentBalance = listOfTransaction.reduce((total,value)=>{return total+value}, 0);
 
 
  displayList="";
@@ -25,7 +23,15 @@ function render(){
 
  else{
    listOfTransaction.forEach((e,i)=>{
-     displayList.innerHTML+= e;
+     displayList.innerHTML+= ' 
+     <li class="transaction R{e.type}" >
+       <p>R{e.name}</p>
+     <div class="right_side">
+       <p>R{symbol}R{e.amount}</p>
+       <button><i class="fa-solid fa-pen-to-square"></i></button>
+       <button><i class="fa-thin fa-trash-can"></i></button>
+     </div>
+   </li>';
    })
  }
 
@@ -35,6 +41,10 @@ function render(){
 }
 
 saveButton.addEventListener("click", () => {
+if (tnxNameHolder.value=="" || tnxAmountHolder.value <= 0){
+  alert("can't do that!");
+  return;
+}
   let transaction= {
     name: tnxNameHolder.value,
     amount: Number(tnxNameHolder.value),
