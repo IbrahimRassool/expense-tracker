@@ -34,4 +34,15 @@ function render(){
   balanceHolder.innerHTML="currentBalance"
 }
 
+saveButton.addEventListener("click", () => {
+  let transaction= {
+    name: tnxNameHolder.value,
+    amount: Number(tnxNameHolder.value),
+    type: income.checked? "income" : "expense"
+  };
+
+  console.log(transaction)
+  listOfTransaction.push(transaction);
+})
+
 render()
