@@ -65,7 +65,7 @@ padding: 20px;
 
 label, input{
     display: block;
-    margin-bottom: auto;
+    padding-right: 15px;
 }
 
 .form-control{
