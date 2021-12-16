@@ -34,7 +34,8 @@ padding: 20px;
 .topbar{
     background-color: darkseagreen;
     color: white;
-    padding: 20px; 
+    padding: 20px;
+    min-width: 300px; 
 }
 
 .text{
