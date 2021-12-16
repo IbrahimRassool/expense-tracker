@@ -53,18 +53,19 @@ padding: 20px;
 
 .form{
     background-color: #ccc;
-    padding: 25px;
+    padding: 20px;
     max-width: 300px;
     margin: auto;
 }
 
 .form p{
-    font-size: 2rem;
+    font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
 label, input{
     display: block;
+    padding: 20px;
 }
 
 .form-control{
