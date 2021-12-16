@@ -35,13 +35,13 @@ padding: 20px;
     background-color: darkseagreen;
     color: white;
     padding: 20px;
-    min-width: 300px; 
+    max-width: 300px; 
 }
 
 .text{
     color: thistle;
     font-size: 0.8rem;
-    margin-bottom: 2px
+    margin:auto
 }
 
 .amount_holder{
