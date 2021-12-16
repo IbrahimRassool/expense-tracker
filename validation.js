@@ -6,8 +6,8 @@ const tnxNameHolder = document.getElementById("name");
 const tnxAmountHolder = document.getElementById("amount");
 const income = document.getElementById("income");
 const expense = document.getElementById("expense");
-const amount = document.getElementById("amount");
-const money_minus = document.getElementById("money-minus");
+const saveButton = document.getElementById("save");
+const display = document.getElementById("list_of_transactions");
 
 // const randomTransations=[
 //     {id:1,text:'salary',amount:400},
