@@ -22,9 +22,15 @@ render()
 
 }
 
+function saveData(){
+  localStorage.setItem("symbol", symbol);
+  localStorage.setItem("balance", currentBalance);
+  localStorage.setItem("list", JSON.stringify(listOfTransaction));
+}
+
 
 function render(){
-  currentBalance = listOfTransaction.reduce((total,value) => {return total +value}, 0);
+  currentBalance = listOfTransaction.reduce((total,value) => {return total +value}, 0)
 
 
  displayList.innerHTML="";
@@ -50,6 +56,7 @@ function render(){
 
   currencyHolder.innerHTML="symbol"
   balanceHolder.innerHTML="currentBalance"
+  saveData();
 }
 
 saveButton.addEventListener("click", () => {
