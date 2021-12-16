@@ -11,11 +11,23 @@ let symbol="R";
 let listOfTransaction=[];
 let currentBalance= 0;
 
+function edit(i){
+
+
+}
+
+function del(i){
+listOfTransaction=listOfTransaction.filter((e, index) => i !== index);
+render()
+
+}
+
+
 function render(){
-  currentBalance = listOfTransaction.reduce((total,value)=>{return total+value}, 0);
+  currentBalance = listOfTransaction.reduce((total,value) => {return total +value}, 0);
 
 
- displayList="";
+ displayList.innerHTML="";
 
  if(listOfTransaction.length=0){
    displayList.innerHTML+="No Transactions found!"
@@ -28,10 +40,10 @@ function render(){
        <p>R{e.name}</p>
      <div class="right_side">
        <p>R{symbol}R{e.amount}</p>
-       <button><i class="fa-solid fa-pen-to-square"></i></button>
-       <button><i class="fa-thin fa-trash-can"></i></button>
+       < button onclick="edit(R{i})"><i class="fa-solid fa-pen-to-square"></i></button>
+       <button onclick="del(R{i})"><i class="fa-thin fa-trash-can"></i></button>
      </div>
-   </li>';
+   </li>
    })
  }
 
