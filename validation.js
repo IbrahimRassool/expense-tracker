@@ -1,8 +1,11 @@
+const currencyHolder = document.getElementById("currency");
+
 const balance = document.getElementById("balance");
-const money_plus = document.getElementById("money-plus");
-const list = document.getElementById("list");
-const form = document.getElementById("form");
-const text = document.getElementById("text");
+
+const tnxNameHolder = document.getElementById("name");
+const tnxAmountHolder = document.getElementById("amount");
+const income = document.getElementById("income");
+const expense = document.getElementById("expense");
 const amount = document.getElementById("amount");
 const money_minus = document.getElementById("money-minus");
 
