@@ -98,3 +98,22 @@ button{
 p.heading{
     margin: 10px 0;
 }
+
+ul{
+    list-style: none;
+}
+
+.transaction{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.income{
+    background-color: rgb(34, 224, 34);
+}
+
+.expense{
+    background-color: red;
+}
