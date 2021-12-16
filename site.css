@@ -67,6 +67,9 @@ label, input{
     display: block;
 }
 
+input{
+    padding: 5px 10px;
+}
 .form-control{
     display: flex;
     justify-content: space-between;
