@@ -112,8 +112,10 @@ ul{
 
 .income{
     background-color: rgb(34, 224, 34);
+    margin: auto;
 }
 
 .expense{
     background-color: red;
+    margin: auto;
 }
