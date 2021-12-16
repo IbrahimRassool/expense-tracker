@@ -57,3 +57,18 @@ padding: 20px;
     max-width: 300px;
     margin: auto;
 }
+
+.form p{
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+}
+
+label, input{
+    display: block;
+}
+
+.form-control:{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
