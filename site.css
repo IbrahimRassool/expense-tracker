@@ -94,3 +94,7 @@ button{
     font-size: 1.2rem;
     cursor: pointer;
 }
+
+p.heading{
+    margin: 10px 0;
+}
