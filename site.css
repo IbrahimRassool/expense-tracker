@@ -101,6 +101,7 @@ p.heading{
 
 ul{
     list-style: none;
+    margin: auto;
 }
 
 .transaction{
@@ -108,15 +109,15 @@ ul{
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    margin: auto;
+   
 }
 
 .income{
     background-color: rgb(34, 224, 34);
-    margin: auto;
+    
 }
 
 .expense{
     background-color: red;
-    margin: auto;
+    
 }
