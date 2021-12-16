@@ -34,10 +34,7 @@ padding: 20px;
 .topbar{
     background-color: darkseagreen;
     color: white;
-    padding: 2px;
-    max-width: 30px;
-    border: 1px solid black;
-    
+    padding: 20px; 
 }
 
 .text{
