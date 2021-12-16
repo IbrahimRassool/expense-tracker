@@ -14,5 +14,24 @@ let listOfTransaction=[];
 let currentBalance= 0;
 
 function render(){
-  let currentBalance = listOfTransaction.reduce((total,value)=>{return total+value}, 0)
+  currentBalance = listOfTransaction.reduce((total,value)=>{return total+value}, 0)
+
+
+ displayList="";
+
+ if(listOfTransaction.length=0){
+   displayList.innerHTML+="No Transactions found!"
+ }
+
+ else{
+   listOfTransaction.forEach((e,i)=>{
+     displayList.innerHTML+= e;
+   })
+ }
+
+
+  currencyHolder.innerHTML="symbol"
+  balanceHolder.innerHTML="currentBalance"
 }
+
+render()
