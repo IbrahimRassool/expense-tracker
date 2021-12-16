@@ -23,7 +23,7 @@ function render(){
 
  else{
    listOfTransaction.forEach((e,i)=>{
-     displayList.innerHTML+= ' 
+     displayList.innerHTML+=
      <li class="transaction R{e.type}" >
        <p>R{e.name}</p>
      <div class="right_side">
@@ -50,9 +50,8 @@ if (tnxNameHolder.value=="" || tnxAmountHolder.value <= 0){
     amount: Number(tnxNameHolder.value),
     type: income.checked? "income" : "expense"
   };
-
-  console.log(transaction)
-  listOfTransaction.push(transaction);
+    listOfTransaction.push(transaction);
+    render();
 })
 
 render()
