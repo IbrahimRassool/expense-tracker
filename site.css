@@ -54,5 +54,6 @@ padding: 20px;
 .form{
     background-color: #ccc;
     padding: 20px;
+    max-width: 300px;
     margin: auto;
 }
