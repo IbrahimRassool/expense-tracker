@@ -75,3 +75,7 @@ input{
     justify-content: space-between;
     align-items: center;
 }
+.radio{
+    display: flex;
+    align-items: center;
+}
