@@ -12,8 +12,10 @@ const displayList = document.getElementById("list_of_transactions");
 let symbol="R";
 let listOfTransaction=[];
 let currentBalance= 0;
+let editIndex=-1;
 
 function edit(i){
+editIndex=i;
 tnxNameHolder.value=listOfTransaction[i].name;
 tnxAmountHolder.value=listOfTransaction[i].amount;
 if(listOfTransaction[i].type=="income"){income.checked= true
@@ -81,7 +83,13 @@ if (tnxNameHolder.value=="" || tnxAmountHolder.value <= 0){
     amount: Number(tnxNameHolder.value),
     type: income.checked? "income" : "expense"
   };
+
+  if(editIndex== -1)
     listOfTransaction.push(transaction);
+  else
+   listOfTransaction(editIndex)= transaction;
+
+   editIndex=-1;
     tnxNameHolder.value="";
     tnxAmountHolder.value="";
     render();
