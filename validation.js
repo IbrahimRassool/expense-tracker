@@ -82,6 +82,8 @@ if (tnxNameHolder.value=="" || tnxAmountHolder.value <= 0){
     type: income.checked? "income" : "expense"
   };
     listOfTransaction.push(transaction);
+    tnxNameHolder.value="";
+    tnxAmountHolder.value="";
     render();
 })
 
