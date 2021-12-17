@@ -1,5 +1,7 @@
+const topCard = document.getElementsByClassName("top_card")[0]
+
 const currencyHolder = document.getElementById("currency");
-const balance = document.getElementById("balance");
+const currentBalanceHolder = document.getElementById("balance");
 const tnxNameHolder = document.getElementById("name");
 const tnxAmountHolder = document.getElementById("amount");
 const income = document.getElementById("income");
@@ -12,8 +14,13 @@ let listOfTransaction=[];
 let currentBalance= 0;
 
 function edit(i){
-
-
+tnxNameHolder.value=listOfTransaction[i].name;
+tnxAmountHolder.value=listOfTransaction[i].amount;
+if(listOfTransaction[i].type=="income"){income.checked= true
+}
+else{
+  expense.checked=true
+}
 }
 
 function del(i){
@@ -28,6 +35,11 @@ function saveData(){
   localStorage.setItem("list", JSON.stringify(listOfTransaction));
 }
 
+function loadData(){
+  symbol =localStorage.setItem("symbol");;
+  currentBalance=Number(JsolocalStorage.setItem("balance"));;
+  listOfTransaction=JSON.parse(localStorage.setItem("list"));;
+}
 
 function render(){
   currentBalance = listOfTransaction.reduce((total,value) => {return total +value}, 0)
