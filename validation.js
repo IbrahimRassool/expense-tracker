@@ -1,5 +1,4 @@
 const topCard = document.getElementsByClassName("top_card")[0]
-
 const currencyHolder = document.getElementById("currency");
 const currentBalanceHolder = document.getElementById("balance");
 const tnxNameHolder = document.getElementById("name");
@@ -58,6 +57,7 @@ function render(){
    listOfTransaction.forEach((e,i)=>{
      displayList.innerHTML+=
      <li class="transaction R{e.type}" >
+       
        <p>R{e.name}</p>
      <div class="right_side">
        <p>R{symbol}R{e.amount}</p>
