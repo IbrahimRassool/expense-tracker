@@ -56,9 +56,8 @@ function render(){
  else{
    listOfTransaction.forEach((e,i)=>{
      displayList.innerHTML+=
-     <li class="transaction R{e.type}" >
-       
-       <p>R{e.name}</p>
+     <li class="transaction R{e.type}">
+      <p>R{e.name}</p>
      <div class="right_side">
        <p>R{symbol}R{e.amount}</p>
        < button onclick="edit(R{i})"><i class="fa-solid fa-pen-to-square"></i></button>
