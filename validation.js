@@ -1,4 +1,5 @@
 const topCard = document.getElementsByClassName("top_card")[0];
+
 const currencyHolder = document.getElementById("currency");
 const currentBalanceHolder = document.getElementById("balance");
 const tnxNameHolder = document.getElementById("name");
@@ -10,9 +11,11 @@ const displayList = document.getElementById("list_of_transaction");
 
 let expenseChart;
 let symbol = "R";
-var listOfTransaction = JSON.parse(window.localStorage.getItem("list")) || [];
-let currentBalance = 0;
 
+var listOfTransaction = JSON.parse(window.localStorage.getItem("list")) || [];
+
+let currentBalance = 0;
+let editIndex = -1;
 
 function del(i) {
   listOfTransaction = listOfTransaction.filter((e, index) => i !== index);
@@ -35,6 +38,7 @@ function loadData() {
 function render(firstLoad = true) {
   let currentBalance = 0;
 
+  console.log(listOfTransaction);
   let currentExpenses = listOfTransaction.reduce(function (total, value) {
     return value.type == "expense" ? total + value.amount : total + 0;
   }, 0);
@@ -47,6 +51,8 @@ function render(firstLoad = true) {
     return value.type == "income" ? total + value.amount : total - value.amount;
   }, 0);
 
+  console.log("List of expenses is ", currentExpenses);
+
   displayList.innerHTML = "";
 
   if (listOfTransaction.length == 0) {
@@ -58,7 +64,7 @@ function render(firstLoad = true) {
       <p>${e.name}</p>
     <div class="right_side">
       <p>${symbol + " " + e.amount}</p>
-      <button onclick="del(${i})">Delete</button>
+      <button onclick="del(${i})"><i class="fa-thin fa-trash-can"></i>Delete</button>
     </div>
   </li>`;
     });
@@ -97,7 +103,18 @@ saveButton.addEventListener("click", function () {
     type: income.checked ? "income" : "expense",
   };
 
-    render((firstLoad = false));
+  if (editIndex == -1) {
+    console.log("Editing");
+    listOfTransaction.push(transaction);
+  } else {
+    console.log("Not Editing");
+    listOfTransaction[editIndex] = transaction;
+  }
+  editIndex = -1;
+  tnxNameHolder.value = "";
+  tnxAmountHolder.value = "";
+
+  render((firstLoad = false));
 });
 
 render();
