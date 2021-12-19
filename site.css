@@ -92,7 +92,7 @@ button{
 }
 
 .btn{
-    display: block;
+    display: inline-block;
     width: 100%;
     background-color: rgb(18, 61, 61);
     color: blue;
