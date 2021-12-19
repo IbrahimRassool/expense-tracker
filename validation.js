@@ -1,4 +1,5 @@
 const topCard = document.getElementsByClassName("top_card")[0];
+
 const currencyHolder = document.getElementById("currency");
 const currentBalanceHolder = document.getElementById("balance");
 const tnxNameHolder = document.getElementById("name");
@@ -13,6 +14,17 @@ let symbol = "R";
 var listOfTransaction = JSON.parse(window.localStorage.getItem("list")) || [];
 
 let currentBalance = 0;
+let editIndex = -1;
+
+function edit(i) {
+  tnxNameHolder.value = listOfTransaction[i].name;
+  tnxAmountHolder.value = listOfTransaction[i].amount;
+  if (listOfTransaction[i].type == "income") {
+    income.checked = true;
+  } else {
+    expense.checked = true;
+  }
+}
 
 function del(i) {
   listOfTransaction = listOfTransaction.filter((e, index) => i !== index);
@@ -22,6 +34,7 @@ function del(i) {
 function saveData() {
   localStorage.setItem("symbol", symbol);
   localStorage.setItem("balance", currentBalance);
+
   localStorage.setItem("list", JSON.stringify(listOfTransaction));
 }
 
@@ -113,3 +126,4 @@ saveButton.addEventListener("click", function () {
   render((firstLoad = false));
 });
 
+render();
