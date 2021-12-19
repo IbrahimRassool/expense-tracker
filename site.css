@@ -14,7 +14,7 @@ body {
 }
 
 .main {
-  padding: 5px;
+  padding: 10px 0;
   text-align: center;
 }
 
@@ -124,7 +124,7 @@ ul {
 }
 
 .expense {
-  background-color: rgb(192, 37, 37);
+  background-color: rgb(80, 6, 6);
 }
 
 .right_side {
