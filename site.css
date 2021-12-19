@@ -83,10 +83,9 @@ button{
   color: rgb(33, 9, 41);
   padding: 10px;
   text-align: center;
-  text-decoration: none;
   display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
+  font-size: 6px;
+  margin: 2px;
   cursor: pointer;
 
   
