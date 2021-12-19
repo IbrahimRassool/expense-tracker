@@ -85,7 +85,7 @@ button {
   text-align: right;
   display: inline-block;
   font-size: 16px;
-  margin: 2px;
+  margin-right: 2px;
   cursor: pointer;
 }
 
