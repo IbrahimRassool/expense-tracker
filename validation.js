@@ -1,5 +1,4 @@
 const topCard = document.getElementsByClassName("top_card")[0];
-
 const currencyHolder = document.getElementById("currency");
 const currentBalanceHolder = document.getElementById("balance");
 const tnxNameHolder = document.getElementById("name");
