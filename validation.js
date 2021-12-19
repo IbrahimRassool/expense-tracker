@@ -36,7 +36,6 @@ function loadData() {
 function render(firstLoad = true) {
   let currentBalance = 0;
 
-  console.log(listOfTransaction);
   let currentExpenses = listOfTransaction.reduce(function (total, value) {
     return value.type == "expense" ? total + value.amount : total + 0;
   }, 0);
@@ -49,7 +48,7 @@ function render(firstLoad = true) {
     return value.type == "income" ? total + value.amount : total - value.amount;
   }, 0);
 
-  console.log("List of expenses is ", currentExpenses);
+  
 
   displayList.innerHTML = "";
 
@@ -100,17 +99,6 @@ saveButton.addEventListener("click", function () {
     amount: Number(tnxAmountHolder.value),
     type: income.checked ? "income" : "expense",
   };
-
-  if (editIndex == -1) {
-    console.log("Editing");
-    listOfTransaction.push(transaction);
-  } else {
-    console.log("Not Editing");
-    listOfTransaction[editIndex] = transaction;
-  }
-  editIndex = -1;
-  tnxNameHolder.value = "";
-  tnxAmountHolder.value = "";
 
   render((firstLoad = false));
 });
