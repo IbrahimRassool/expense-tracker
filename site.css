@@ -81,6 +81,7 @@ input{
 button{
   border: none;
   color: rgb(33, 9, 41);
+  background-color: turquoise;
   padding: 10px;
   text-align: center;
   display: inline-block;
