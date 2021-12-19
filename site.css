@@ -82,6 +82,12 @@ button{
     outline: none;
     border: none;
     background: none;
+    border: none;
+  color: chocolate;
+    display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
 }
 
 .btn{

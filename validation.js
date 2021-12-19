@@ -44,7 +44,7 @@ function loadData(){
 }
 
 function render(){
-  currentBalance = listOfTransaction.reduce((total,value) {
+  currentBalance = listOfTransaction.reduce((total,value){
   if (amount.type==income)return (total +value)
   else return(total-value), 0})
 
