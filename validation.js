@@ -9,9 +9,7 @@ const saveButton = document.getElementById("save");
 const displayList = document.getElementById("list_of_transaction");
 
 let symbol = "R";
-
 var listOfTransaction = JSON.parse(window.localStorage.getItem("list")) || [];
-
 let currentBalance = 0;
 
 function del(i) {
@@ -22,7 +20,6 @@ function del(i) {
 function saveData() {
   localStorage.setItem("symbol", symbol);
   localStorage.setItem("balance", currentBalance);
-
   localStorage.setItem("list", JSON.stringify(listOfTransaction));
 }
 
