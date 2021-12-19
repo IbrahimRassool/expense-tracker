@@ -14,17 +14,6 @@ let symbol = "R";
 var listOfTransaction = JSON.parse(window.localStorage.getItem("list")) || [];
 
 let currentBalance = 0;
-let editIndex = -1;
-
-function edit(i) {
-  tnxNameHolder.value = listOfTransaction[i].name;
-  tnxAmountHolder.value = listOfTransaction[i].amount;
-  if (listOfTransaction[i].type == "income") {
-    income.checked = true;
-  } else {
-    expense.checked = true;
-  }
-}
 
 function del(i) {
   listOfTransaction = listOfTransaction.filter((e, index) => i !== index);
