@@ -44,9 +44,9 @@ function loadData(){
 }
 
 function render(){
-  currentBalance = listOfTransaction.reduce((total,value) 
-  if amount.type==income return (total +value)
-  else return(total-value), 0)
+  currentBalance = listOfTransaction.reduce((total,value) {
+  if (amount.type==income)return (total +value)
+  else return(total-value), 0})
 
 
  displayList.innerHTML="";
