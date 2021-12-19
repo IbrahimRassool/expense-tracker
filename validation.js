@@ -12,7 +12,7 @@ const cancelEditButton = document.getElementById("cancel_edit");
 let symbol="R";
 let listOfTransaction=[];
 let currentBalance= 0;
-let editIndex=-1;
+
 
 function edit(i){
 editIndex=i;
@@ -44,7 +44,7 @@ function loadData(){
 }
 
 function render(){
-  currentBalance = listOfTransaction.reduce((total,value){
+  currentBalance = listOfTransaction.reduce(function(total,value){
   if (amount.type==income)return (total +value)
   else return(total-value), 0})
 
