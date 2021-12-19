@@ -1,4 +1,5 @@
 const topCard = document.getElementsByClassName("top_card")[0];
+
 const currencyHolder = document.getElementById("currency");
 const currentBalanceHolder = document.getElementById("balance");
 const tnxNameHolder = document.getElementById("name");
@@ -8,9 +9,11 @@ const expense = document.getElementById("expense");
 const saveButton = document.getElementById("save");
 const displayList = document.getElementById("list_of_transaction");
 
+let expenseChart;
 let symbol = "R";
 var listOfTransaction = JSON.parse(window.localStorage.getItem("list")) || [];
 let currentBalance = 0;
+
 
 function del(i) {
   listOfTransaction = listOfTransaction.filter((e, index) => i !== index);
@@ -20,6 +23,7 @@ function del(i) {
 function saveData() {
   localStorage.setItem("symbol", symbol);
   localStorage.setItem("balance", currentBalance);
+
   localStorage.setItem("list", JSON.stringify(listOfTransaction));
 }
 
@@ -44,8 +48,6 @@ function render(firstLoad = true) {
     return value.type == "income" ? total + value.amount : total - value.amount;
   }, 0);
 
-  
-
   displayList.innerHTML = "";
 
   if (listOfTransaction.length == 0) {
@@ -69,7 +71,7 @@ function render(firstLoad = true) {
     saveData();
   }
 
-  new Chart("transactionsPieChart", {
+  expenseChart = new Chart("transactionsPieChart", {
     type: "pie",
     data: {
       labels: ["Income", "Expense"],
@@ -96,7 +98,7 @@ saveButton.addEventListener("click", function () {
     type: income.checked ? "income" : "expense",
   };
 
-  render((firstLoad = false));
+    render((firstLoad = false));
 });
 
 render();
