@@ -61,7 +61,7 @@ function render(firstLoad = true) {
       <p>${e.name}</p>
     <div class="right_side">
       <p>${symbol + " " + e.amount}</p>
-      <button onclick="del(${i})"><i class="fa-thin fa-trash-can"></i>Delete</button>
+      <button onclick="del(${i})">Delete</button>
     </div>
   </li>`;
     });
