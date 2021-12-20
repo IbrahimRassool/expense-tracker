@@ -34,7 +34,7 @@ body {
 .topbar {
   background-color: rgb(29, 161, 29);
   color: white;
-  max-width: 500px;
+  max-width: 300px;
   margin: auto;
   border: 3px solid;
 }
@@ -52,7 +52,7 @@ body {
 .form {
   background-color: rgb(173, 132, 132);
   padding: 5px;
-  max-width: 500px;
+  max-width: 300px;
 }
 
 .form p {
