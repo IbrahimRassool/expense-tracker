@@ -131,6 +131,7 @@ ul {
 .right_side {
   display: inline-flex;
   gap: 5px;
+  align-self: stretch;
 }
 
 .right_side button {
