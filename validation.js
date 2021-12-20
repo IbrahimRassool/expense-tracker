@@ -15,7 +15,7 @@ let symbol = "R";
 var listOfTransaction = JSON.parse(window.localStorage.getItem("list")) || [];
 
 let currentBalance = 0;
-let editIndex = -1;
+
 
 function del(i) {
   listOfTransaction = listOfTransaction.filter((e, index) => i !== index);
@@ -51,7 +51,7 @@ function render(firstLoad = true) {
     return value.type == "income" ? total + value.amount : total - value.amount;
   }, 0);
 
-  console.log("List of expenses is ", currentExpenses);
+  
 
   displayList.innerHTML = "";
 
@@ -103,18 +103,7 @@ saveButton.addEventListener("click", function () {
     type: income.checked ? "income" : "expense",
   };
 
-  if (editIndex == -1) {
-    console.log("Editing");
-    listOfTransaction.push(transaction);
-  } else {
-    console.log("Not Editing");
-    listOfTransaction[editIndex] = transaction;
-  }
-  editIndex = -1;
-  tnxNameHolder.value = "";
-  tnxAmountHolder.value = "";
-
-  render((firstLoad = false));
+    render((firstLoad = false));
 });
 
 render();
