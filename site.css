@@ -115,7 +115,7 @@ ul {
 .transaction {
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: space-evenly;
   padding: 10px;
   margin: 5px 0;
 }
