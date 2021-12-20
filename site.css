@@ -129,7 +129,7 @@ ul {
 }
 
 .right_side {
-  display: inline;
+  display: inline-flex;
   gap: 5px;
 }
 
