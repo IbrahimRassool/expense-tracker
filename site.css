@@ -32,8 +32,8 @@ body {
 }
 
 .topbar {
-  background-color: rgb(29, 161, 29);
-  color: white;
+  background-color: rgb(42, 138, 42);
+  color: darkblue;
   max-width: 400px;
   margin: auto;
   border: 3px solid;
