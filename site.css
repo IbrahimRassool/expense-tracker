@@ -40,7 +40,7 @@ body {
 }
 
 .text {
-  color: rgb(44, 44, 172));
+  color: rgb(44, 44, 172);
   font-size: 1.5rem;
 }
 
@@ -122,10 +122,12 @@ ul {
 
 .income {
   background-color: rgb(156, 247, 104);
+  color:blue;
 }
 
 .expense {
-  background-color: rgb(187, 62, 62);
+  background-color: rgb(148, 58, 58);
+  color: gold;
 }
 
 .right_side {
