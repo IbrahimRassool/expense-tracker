@@ -110,12 +110,12 @@ p {
 
 ul {
   list-style: none;
+  align-content: space-evenly;
 }
 
 .transaction {
   display: flex;
   justify-content: space-between;
-  align-content: space-evenly;
   padding: 10px;
   margin: 5px 0;
 }
