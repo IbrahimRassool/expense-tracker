@@ -130,7 +130,7 @@ ul {
 
 .right_side {
   display: inline-flex;
-  gap: 5px;
+  gap: 50px;
   align-self: stretch;
 }
 
