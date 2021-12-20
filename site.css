@@ -141,7 +141,7 @@ ul {
   cursor: pointer;
   transition: color 0.3s ease;
   display: inline-flex;
-  background-color: rgb(103, 103, 173);
+  background-color: blue;
   color: gold;
 }
 
