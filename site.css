@@ -62,7 +62,7 @@ body {
 
 label,
 input {
-  display: block;
+  display: inline-block;
 }
 
 input {
