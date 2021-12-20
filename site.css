@@ -25,10 +25,12 @@ body {
   font-family: "Red Hat Display", sans-serif;
   color: white;
   text-align: center;
+  max-width: 400px;
 }
 
 .header {
   font-size: 2rem;
+  
 }
 
 .topbar {
