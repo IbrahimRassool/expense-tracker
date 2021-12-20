@@ -30,7 +30,7 @@ body {
 
 .header {
   font-size: 2rem;
-  
+  max-width: 400px;
 }
 
 .topbar {
