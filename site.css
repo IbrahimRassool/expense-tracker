@@ -141,6 +141,8 @@ ul {
   cursor: pointer;
   transition: color 0.3s ease;
   display: inline-flex;
+  background-color: blue;
+  color: gold;
 }
 
 .right_side button:hover {
