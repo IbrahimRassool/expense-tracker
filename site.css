@@ -138,7 +138,7 @@ ul {
   color: white;
   cursor: pointer;
   transition: color 0.3s ease;
-  align-items: flex-end;
+  display: inline-flex;
 }
 
 .right_side button:hover {
